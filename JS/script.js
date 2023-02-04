@@ -16,3 +16,13 @@ console.log('firebase has been implemented successfully');
 // TO DO
 // implement chatGPT
 // USE FIREBASE AND JQUERY FOR APP
+
+function signUp(){
+  console.log('signup incoming');
+  email = $("#email").val();
+  password = $("#password").val();
+  firebase.auth().createUserWithEmailAndPassword(email,password).catch(function(error){
+    console.log(error);
+  });
+
+}
