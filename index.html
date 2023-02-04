@@ -12,7 +12,9 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+
 
   </head>
   <body>
@@ -33,6 +35,23 @@
     </table>
     <br>
     <button type="button" name="button" onclick="signUp()">REGISTER</button>
+    <button type="button" name="button" onclick="signOut()">Sign out</button>
+    <h1>Already a user login here!</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>Email : </td>
+          <td><input type="text" placeholder="email here" id="loginemail"></input></td>
+        </tr>
+        <tr>
+          <td>Password :</td>
+          <td><input type="password" placeholder="Password" id = "loginpw"></input></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button type="button" name="button" onclick="loginUser()">Login</button>
+
 
   </body>
 </html>
