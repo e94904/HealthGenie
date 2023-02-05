@@ -14,10 +14,66 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-
+    <!-- Responsive CSS and UI JS -->
+    <script src="JS/UI.js" defer></script>
+    <link rel="stylesheet" href="CSS/responsive.css">
   </head>
   <body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Health Genie </a>
+        <nav class="navbar">
+            <a href="./index.html">home</a>
+            <a href="./login.html">Login</a>
+            <a href="./about.html">about</a>
+            <a href="./contacts.html">contact</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section class="home">
+      <section class="book" id="book">
+          <h1 class="heading">Looks like your account is not verified!</h1>
+          <h1 class="heading">We have sent you an email please check.</h1>
+          <div class="row">
+              <div class="image">
+                  <img src="image/book-img.svg" alt="">
+              </div>
+              <form>
+                  <h3>Verification</h3>
+                  <h3>If you need to resend click below</h3>
+                  <h3>If you verified please login below</h3>
+                  <button type = "button" name="button" class="btn" onclick = "sendVerifyEmail()">Resend Email</button>
+
+                  <button type="button" class = "btn" onclick = "window.location.href = 'index.html'">Login</button>
+
+                  <br>
+              </form>
+          </div>
+      </section>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="./login.html"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="./about.html"> <i class="fas fa-chevron-right"></i> about </a>
+            </div>
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> 24/7 Helpline</a>
+                <a href="#"> <i class="fas fa-chevron-right"></i>Medical Reminders</a>
+                <a href="#"> <i class="fas fa-chevron-right"></i>Appointments</a>
+                <a href="#"> <i class="fas fa-chevron-right"></i>Health Record</a>
+            </div>
+        </div>
+        <div class="credit"> created by <span>Team Not In Stevenson</span> | all rights reserved </div>
+    </section>
     <h1>Verify Email VIEW BABY</h1>
+    <h2>You are not verified an email has been sent if need another one please click button below and we will send an email to verify</h2>
+    <button type="button" name="button" onclick="sendVerifyEmail()">Send Email Verification</button>
+    <button type="button" class = "btn" onclick = "window.location.href = 'index.html'">Login</button>
 
   </body>
 </html>

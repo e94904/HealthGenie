@@ -7,51 +7,83 @@
     <title>Health Genie</title>
     <!-- OUR CSS -->
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="CSS/responsive.css">
     <!-- OUR JS -->
     <script src="JS/script.js" defer></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-
-
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <!-- Response Design JS-->
+    <script src="JS/UI.js" defer></script>
   </head>
   <body>
-    <h1 id ="hello">HELLO WORLD</h1>
-    <p>THIS IS SOME TEXT</p>
-    <h1>Sign Up Today</h1>
-    <table>
-      <tbody>
-        <tr>
-          <td>Email:</td>
-          <td><input type="text" placeholder="Enter Email Here!" id = "email"></input></td>
-        </tr>
-        <tr>
-          <td>Password:</td>
-          <td><input type="password" placeholder="Password Here!" id="password"></td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <button type="button" name="button" onclick="signUp()">REGISTER</button>
-    <button type="button" name="button" onclick="signOut()">Sign out</button>
-    <h1>Already a user login here!</h1>
-    <table>
-      <tbody>
-        <tr>
-          <td>Email : </td>
-          <td><input type="text" placeholder="email here" id="loginemail"></input></td>
-        </tr>
-        <tr>
-          <td>Password :</td>
-          <td><input type="password" placeholder="Password" id = "loginpw"></input></td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <button type="button" name="button" onclick="loginUser()">Login</button>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Health Genie </a>
+        <nav class="navbar">
+            <a href="#">home</a>
+            <a href="login.html">Login</a>
+            <a href="about.html">about</a>
+            <a href="./contacts.html">Appointment</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
 
+    <section class="home" id="home">
+        <div class="image">
+            <img src="image/home-img.svg" alt="">
+        </div>
+        <div class="content">
+            <h3>Wishing you the Best Health</h3>
+            <br>
+            <a href="getstarted.html" class="btn">Get Started<span class="fas fa-chevron-right"></span> </a>
+        </div>
+    </section>
 
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>140+</h3>
+            <p>doctors at work</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <h3>1040+</h3>
+            <p>satisfied patients</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-procedures"></i>
+            <h3>500+</h3>
+            <p>bed facility</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-hospital"></i>
+            <h3>80+</h3>
+            <p>available hospitals</p>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="./login.html"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="./about.html"> <i class="fas fa-chevron-right"></i> about </a>
+            </div>
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> 24/7 Helpline</a>
+                <a href="#"> <i class="fas fa-chevron-right"></i>Medical Reminders</a>
+                <a href="#"> <i class="fas fa-chevron-right"></i>Appointments</a>
+                <a href="#"> <i class="fas fa-chevron-right"></i>Health Record</a>
+            </div>
+        </div>
+        <div class="credit"> created by <span>Team Not In Stevenson</span> | all rights reserved </div>
+    </section>
   </body>
 </html>

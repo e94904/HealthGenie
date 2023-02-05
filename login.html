@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Genie </title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Responsive UI button js -->
+    <script src="js/UI.js" defer></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <!-- OUR JS -->
+    <script src="JS/script.js" defer></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+</head>
+<body>
+  <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Health Genie </a>
+      <nav class="navbar">
+          <a href="./index.html">home</a>
+          <a href="./login.html">Login</a>
+          <a href="./about.html">about</a>
+          <a href="./contacts.html">contact</a>
+      </nav>
+      <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
+
+  <section class="home">
+    <section class="book" id="book">
+        <h1 class="heading">Already made an account?</h1>
+        <h1 class="heading">Login below to begin!</h1>
+        <div class="row">
+            <div class="image">
+                <img src="image/book-img.svg" alt="">
+            </div>
+            <form>
+                <h3>Login</h3>
+                <input type="text" placeholder="Please enter your email" class="box" id = "loginemail">
+                <input type="password" placeholder="Please enter your password" class="box" id = "loginpw">
+                <button type = "button" name="button" class="btn" onclick = "loginUser()">Log In</button>
+                <br>
+            </form>
+        </div>
+    </section>
+  </section>
+
+  <section class="footer">
+      <div class="box-container">
+          <div class="box">
+              <h3>quick links</h3>
+              <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+              <a href="./login.html"> <i class="fas fa-chevron-right"></i> services </a>
+              <a href="./about.html"> <i class="fas fa-chevron-right"></i> about </a>
+          </div>
+          <div class="box">
+              <h3>our services</h3>
+              <a href="#"> <i class="fas fa-chevron-right"></i> 24/7 Helpline</a>
+              <a href="#"> <i class="fas fa-chevron-right"></i>Medical Reminders</a>
+              <a href="#"> <i class="fas fa-chevron-right"></i>Appointments</a>
+              <a href="#"> <i class="fas fa-chevron-right"></i>Health Record</a>
+          </div>
+      </div>
+      <div class="credit"> created by <span>Team Not In Stevenson</span> | all rights reserved </div>
+  </section>
+
+
+
+
+
+</body>
+</html>
