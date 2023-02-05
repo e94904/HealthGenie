@@ -15,7 +15,7 @@ function sleep(ms) {
   console.log("What time today do you need to take your medicaitons?");
 
   const hour = prompt("Enter Hour (0-24). 24 HOUR TIME ");
-  const minutes = prompt("Enter Minute (0-59) ");
+  const minutes = prompt("Enter Minutes (0-59) ");
 
   var pill_time = new Date();
   pill_time.setDate(pill_time.getDate())
@@ -32,7 +32,7 @@ function sleep(ms) {
   console.log(time_diff)
 
   function timesUp(){
-    console.log("Take your pills now")
+    console.log("It's time to take your pills")
   }
 
 
