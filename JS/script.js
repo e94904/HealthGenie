@@ -13,9 +13,7 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 console.log('firebase has been implemented successfully');
-// TO DO
-// implement chatGPT
-// USE FIREBASE AND JQUERY FOR APP
+
 
 // sign up user
 function signUp(){
@@ -25,7 +23,7 @@ function signUp(){
   firebase.auth().createUserWithEmailAndPassword(email,password).then(function(){
     user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
-      console.log('Email Verification has been sent');
+      alert('Email Verification has been sent please check your email');
     }).catch(function(error){
       console.error(error);
     });
@@ -34,6 +32,7 @@ function signUp(){
     console.error(error);
   })
 }
+
 // sign out user
 function signOut(){
   firebase.auth().signOut();
@@ -50,13 +49,27 @@ function loginUser(){
   // checking if they are verified
   var user = firebase.auth().currentUser;
   if (user.emailVerified) {
-    console.log("YAY email is verified ");
+    alert("Looks Like you are verified now navigating to the main app");
     // take them to app view
     window.location = "app.html";
   } else {
-    console.log("Whoops looks like you are not verified you need to be verified to use our application");
+    alert("Whoops looks like you are not verified you need to be verified to use our application");
     // take them to verify view
+    user.sendEmailVerification().then(function() {
+      console.log("verification email has been sent");
+    }).catch(function(error) {
+      console.error(error);
+    });
     window.location = "verify-email.html";
-
   }
+}
+
+// within email view to resend or send email verification
+function sendVerifyEmail() {
+  var user = firebase.auth().currentUser;
+  user.sendEmailVerification().then(function() {
+    alert("Verification email has been sent");
+  }).catch(function(error) {
+    console.error(error);
+  });
 }
