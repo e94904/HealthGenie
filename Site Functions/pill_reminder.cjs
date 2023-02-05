@@ -27,10 +27,10 @@ function sleep(ms) {
   pill_time.setDate(pill_time.getDate())
   pill_time.setHours(hour, minutes, 0)
   //pill_time.toLocaleString('en-US', {timeZone: 'US/Pacific'})
-  console.log("PILL TIME")
-  console.log(pill_time)
-  console.log("NOW")
-  console.log(now)
+  //console.log("PILL TIME")
+  //console.log(pill_time)
+  //console.log("NOW")
+  //console.log(now)
 
   time_diff = pill_time - now
   console.log(time_diff)
