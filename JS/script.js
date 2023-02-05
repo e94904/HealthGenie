@@ -36,7 +36,7 @@ function signUp(){
 // sign out user
 function signOut(){
   firebase.auth().signOut();
-  console.log('User has been signed out');
+  alert('User has been signed out');
 }
 
 // login user
