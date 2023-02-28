@@ -4,4 +4,4 @@ Pioneering the future in health.
 
 Insert mic drop. 
 
-Put real description later. 
+CruzHacks 2023 submission where we wanted to make healthcare easier and more accesible to the general public. 
